@@ -5,3 +5,8 @@ Due: 3/12/25 11:59
 After reading the specs, start the populating
 a list of things you think might have to
 do to finish this project.
+
+1) read instructions
+	understand how the map works-"learned that we are looking for a route"
+2) understand where to utilize queues and stacks
+3) create methods to enqueue and dequque
