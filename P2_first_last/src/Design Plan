@@ -6,7 +6,7 @@ After reading the specs, start the populating
 a list of things you think might have to
 do to finish this project.
 
-1) read instructions
+1) read instructions # need p2, position, maze, solver, queueSolver, Stack Solver, OptimalSolver classes
 	understand how the map works-"learned that we are looking for a route"
 2) understand where to utilize queues and stacks
 3) create methods to enqueue and dequque
