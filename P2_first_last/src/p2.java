@@ -4,34 +4,58 @@ import java.util.Scanner;
 
 public class p2 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("p2");
-		readMap("Test01");
-	}
+    public static void main(String[] args) {
+        System.out.println("p2");
+        read("Test02");
+        readMap("Test02");
+    }
 
-	
-	public static void readMap(String fileName) {
-		try {
-			File file = new File(fileName);
+    public static void read(String fileName) {
+        File file = new File(fileName);
+
+        try {
 			Scanner scanner = new Scanner(file);
-			int numRows = scanner.nextInt();
-			int numCols = scanner.nextInt();
-			int numRooms = scanner.nextInt();
-			
-			int rowIndex=0;
-			while(scanner.hasNextLine()) {
-				String row = scanner.nextLine();
-				for(int i =0; i<numCols&& i<row.length(); i++) {
-					char el = row.charAt(i);
-					Tile obj = new Tile(rowIndex, i, el );
-				}
+			System.out.println("Is this in Coordinate form Y/N?");
+			if(scanner.nextLine().equals("Y")) {
+				System.out.println("you suck");
 			}
-			
 		} catch (FileNotFoundException e) {
-			System.out.println(e);
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
-	}
+
+    }
+    public static void readMap(String fileName) {
+        try {
+            File file = new File(fileName);
+            Scanner scanner = new Scanner(file);
+            
+            // Read and extract first row (metadata)
+            int numRows = scanner.nextInt();
+            int numCols = scanner.nextInt();
+            int numRooms = scanner.nextInt();
+            scanner.nextLine(); // Move to next line after integers
+            
+            // Read and print the map (excluding the first row)
+            int rowIndex = 0;
+            while (scanner.hasNextLine()) {
+                String row = scanner.nextLine();
+                
+                if (rowIndex < numRows) { // Ignore junk lines beyond expected rows
+                    for (int i = 0; i < numCols && i < row.length(); i++) {
+                        System.out.print(row.charAt(i));
+                    }
+                    System.out.println(); // Newline for next row
+                    rowIndex++;
+                }
+            }
+            
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + e.getMessage());
+        }
+
+    
+    }
 	
 }
