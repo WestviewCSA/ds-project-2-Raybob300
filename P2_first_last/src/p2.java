@@ -7,6 +7,10 @@ public class p2 {
     public static void main(String[] args) {
         System.out.println("p2");
         readMap("Test02");
+        Maze maze = new Maze();
+        maze.check();
+        maze.translateMazeFile("Test02");
+
     }
 
 
