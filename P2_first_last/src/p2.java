@@ -6,25 +6,10 @@ public class p2 {
 
     public static void main(String[] args) {
         System.out.println("p2");
-        read("Test02");
         readMap("Test02");
     }
 
-    public static void read(String fileName) {
-        File file = new File(fileName);
 
-        try {
-			Scanner scanner = new Scanner(file);
-			System.out.println("Is this in Coordinate form Y/N?");
-			if(scanner.nextLine().equals("Y")) {
-				System.out.println("you suck");
-			}
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-    }
     public static void readMap(String fileName) {
         try {
             File file = new File(fileName);
