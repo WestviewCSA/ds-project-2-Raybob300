@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class p2 {
 
     public static void main(String[] args) {
+    	
+    	// 
         System.out.println("p2");
         readMap("Test02");
-        Maze maze = new Maze();
-        maze.check();
-        maze.translateMazeFile("Test02");
+      //need to translate the txt to a 2d array and make it the parameter  Maze maze = new Maze(maze);
 
     }
 
