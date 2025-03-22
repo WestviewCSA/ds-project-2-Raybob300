@@ -4,24 +4,71 @@ import java.util.Scanner;
 
 public class p2 {
     public static void main(String[] args) {
+    	
+
+
         Scanner userInput = new Scanner(System.in);
-
-        // Ask for the file name
-        System.out.print("Enter the maze file name: ");
+ System.out.print("Enter the maze file name: ");
+        
         String fileName = userInput.nextLine();
-
         // Read the map and store it in a 2D char array
         char[][] maze = readMap(fileName);
-
-        if (maze != null) {
-            Maze mazeSolver = new Maze(maze);
-            mazeSolver.findPath();
-            mazeSolver.printMaze(); // Print the solved maze
+        System.out.print("Do you want to solve as a Queue, Stack, or Optimal: ");
+        String Type = userInput.nextLine();
+        
+        
+        
+        
+        
+        //Queue Solver call
+        if(Type.equals("Queue")) {
+        	 if (maze != null) {
+                 QueueSolver mazeSolver = new QueueSolver(maze);
+                 mazeSolver.findPath();
+                 mazeSolver.printMaze(); // Print the solved maze
+             }
         }
+       
+        else if(Type.equals("Stack")) {
+       	 if (maze != null) {
+                QueueSolver mazeSolver = new QueueSolver(maze); // will need to change this to a stack solver
+                mazeSolver.findPath();
+                mazeSolver.printMaze(); // Print the solved maze
+            }
+       	
+       }
+        else if (Type.equals("Optimal")) {
+          	 if (maze != null) {
+                 QueueSolver mazeSolver = new QueueSolver(maze); // will need to change this to a Optimal  solver
+                 mazeSolver.findPath();
+                 mazeSolver.printMaze(); // Print the solved maze
+             }
+          	 
+        } 	 
+        else {
+          		 System.out.println("Spell correctly");
+          	     userInput = new Scanner(System.in);
+          	  System.out.print("Enter the maze file name: ");
+          	         
+          	          fileName = userInput.nextLine();
+          	         // Read the map and store it in a 2D char array
+          	          maze = readMap(fileName);
+          	         System.out.print("Do you want to solve as a Queue, Stack, or Optimal: ");
+          	          Type = userInput.nextLine();
+          	         
+          	 }
+        
+       
+
+   
 
         userInput.close();
+        
+    
+    	
     }
 
+    
     public static char[][] readMap(String fileName) {
         try {
             File file = new File(fileName);
