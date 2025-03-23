@@ -31,7 +31,7 @@ public class p2 {
        
         else if(Type.equals("Stack")) {
        	 if (maze != null) {
-                QueueSolver mazeSolver = new QueueSolver(maze); // will need to change this to a stack solver
+                StackSolver mazeSolver = new StackSolver(maze); 
                 mazeSolver.findPath();
                 mazeSolver.printMaze(); // Print the solved maze
             }
