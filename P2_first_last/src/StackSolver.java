@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class StackSolver {
@@ -82,4 +83,7 @@ public class StackSolver {
             System.out.println(new String(row));
         }
     }
+
 }
+
+

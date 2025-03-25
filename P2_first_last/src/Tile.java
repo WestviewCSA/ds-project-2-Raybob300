@@ -3,7 +3,7 @@ public class Tile {
 	private int row, col;
 	private char type;
 	
-	
+		
 	
 	
 	

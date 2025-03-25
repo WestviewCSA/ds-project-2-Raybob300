@@ -1,0 +1,14 @@
+1. Set up a `Scanner` to prompt the user for a maze file.  
+2. Read the maze file and store it as a 2D array.  
+3. Handle file errors like `FileNotFoundException`.  
+4. Implement stack-based (DFS) pathfinding to solve the maze.  
+5. Implement queue-based (BFS) pathfinding to solve the maze.  
+6. Implement an optimal shortest path algorithm (Dijkstra’s or A*).  
+7. Ensure the program supports multiple connected mazes using `'|'`.  
+8. Modify the maze to display the solved path using `+` symbols.  
+9. Implement custom exceptions for invalid mazes or unsolvable paths.  
+10. Add command-line arguments to choose search algorithms.  
+11. Support both text-map and coordinate-based input formats.  
+12. Measure and print the runtime for each algorithm.  
+13. Create and test custom mazes, including edge cases.  
+14. Debug and optimize performance where necessary.  
