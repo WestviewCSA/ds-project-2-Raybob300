@@ -34,28 +34,44 @@ public class p2 {
         
         //Queue Solver call
         if(Type.equals("Queue")) {
+            long startTime = System.nanoTime();
+           // in nanoseconds
         	 if (maze != null) {
                  QueueSolver mazeSolver = new QueueSolver(maze);
                  mazeSolver.findPath();
                  mazeSolver.printMaze(); // Print the solved maze
-             }
+                 long endTime = System.nanoTime();
+                 long duration = (endTime - startTime);  
+                 System.out.println("Execution time: " + duration + " nanoseconds");
+
+        	 }
         }
        
         else if(Type.equals("Stack")) {
-       	 if (maze != null) {
-                StackSolver mazeSolver = new StackSolver(maze); 
-                mazeSolver.findPath();
-                mazeSolver.printMaze(); // Print the solved maze
-            }
-       	
-       }
-        else if (Type.equals("Optimal")) {
-          	 if (maze != null) {
-                 QueueSolver mazeSolver = new QueueSolver(maze); // will need to change this to a Optimal  solver
+            long startTime = System.nanoTime();
+           // in nanoseconds
+        	 if (maze != null) {
+                 StackSolver mazeSolver = new StackSolver(maze);
                  mazeSolver.findPath();
                  mazeSolver.printMaze(); // Print the solved maze
-             }
-          	 
+                 long endTime = System.nanoTime();
+                 long duration = (endTime - startTime);  
+                 System.out.println("Execution time: " + duration + " nanoseconds");
+
+        	 }
+        }
+        else if (Type.equals("Optimal")) {
+            long startTime = System.nanoTime();
+           // in nanoseconds
+        	 if (maze != null) {
+                 QueueSolver mazeSolver = new QueueSolver(maze);
+                 mazeSolver.findPath();
+                 mazeSolver.printMaze(); // Print the solved maze
+                 long endTime = System.nanoTime();
+                 long duration = (endTime - startTime);  
+                 System.out.println("Execution time: " + duration + " nanoseconds");
+
+        	 }
         } 	 
         else {
           		 System.out.println("Spell correctly");
