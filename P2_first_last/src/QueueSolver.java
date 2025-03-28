@@ -85,7 +85,7 @@ public class QueueSolver  {
     }
     
  
-
+// getters and setters auto generated
 	public char[][] getMaze() {
 		return maze;
 	}

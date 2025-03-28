@@ -64,7 +64,7 @@ public class p2 {
             long startTime = System.nanoTime();
            // in nanoseconds
         	 if (maze != null) {
-                 QueueSolver mazeSolver = new QueueSolver(maze);
+                 OptimalSolver mazeSolver = new OptimalSolver(maze);
                  mazeSolver.findPath();
                  mazeSolver.printMaze(); // Print the solved maze
                  long endTime = System.nanoTime();

@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class StackSolver {
+	//var decleration
     private char[][] maze;
     private int rows, cols;
     private int startX, startY;
@@ -18,7 +19,7 @@ public class StackSolver {
         findStart();
     }
 
-    private void findStart() {
+    private void findStart() {//looks for the W
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 if (maze[i][j] == start) {
@@ -30,7 +31,7 @@ public class StackSolver {
         }
     }
 
-    public void findPath() {
+    public void findPath() {// finds the parth and then mark using methods
         boolean[][] visited = new boolean[rows][cols];
         int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
         Stack<int[]> stack = new Stack<int[]>();
@@ -59,7 +60,7 @@ public class StackSolver {
         }
     }
 
-    private void markPath(int[][][] parent, int endX, int endY) {
+    private void markPath(int[][][] parent, int endX, int endY) {//mark path using this method
         int x = endX, y = endY;
         while (maze[x][y] != start) {
             int P1 = parent[x][y][0];
@@ -84,6 +85,10 @@ public class StackSolver {
         }
     }
 
+    
+    
+    
+    
 }
 
 
